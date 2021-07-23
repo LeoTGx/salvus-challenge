@@ -56,6 +56,20 @@
     background-color: lightgray;
 }
 
+.selector{
+    width: 300px;
+    height: 35px;
+    background: white;
+    color: black;
+    padding-left: 5px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius:3px;
+    margin-left: 10px;
+
+
+}
+
 
 .header{
     background-color: #d2f9f1 ;

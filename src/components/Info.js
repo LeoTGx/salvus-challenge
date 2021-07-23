@@ -133,9 +133,7 @@ const UserInfo = () => {
              </div> 
              
             <div className="horizontal-layout horizontal-layout--space-evenly" >
-                
-                <form key = {1}>
-                    <div className="vertical-layout vertical-layout--center">
+                                    <div className="vertical-layout vertical-layout--center">
                                     
                             <label>Nome completo</label>
                             <Input type="text" value={nome} onChange={e => setName(e.currentTarget.value)} />
@@ -156,7 +154,7 @@ const UserInfo = () => {
                             <Input type="text" value={especialidade} onChange={e => setEspec(e.currentTarget.value)} />   
                             <Button onClick={onUpdateEspec}>Atualizar especialidade</Button> 
                     </div>     
-                </form>
+
                 
 
                 

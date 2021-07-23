@@ -167,14 +167,14 @@ const CreateUser = ({ history }) => {
           <br></br>
           <div>
             <React.StrictMode>
-              <Dropdown />
+              <Dropdown className="selector" />
             </React.StrictMode>
           </div>
 
           <div>
             <h4>Onde pode atender</h4>
             <label>
-            <lable>Cidades que pode atender: </lable> <br/>
+            <label>Cidades que pode atender: </label> <br/>
               {
                   checkboxes.map(item => (
                       <label key={item.key}>

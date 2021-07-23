@@ -30,7 +30,7 @@ class Dropdown extends React.Component {
 			<div id="container">
 				<div>
 					<label>Estado   </label>
-					<select background = "black" name="estado" placeholder="State" value={this.state.selectedState} onChange={this.changeState}>
+					<select className="selector" background = "black" name="estado" placeholder="State" value={this.state.selectedState} onChange={this.changeState}>
 						<option>---Selecionar Estado---</option>
 						{this.state.states.map((e, key) => {
 							return <option key={key}>{e.name}</option>;
@@ -40,7 +40,7 @@ class Dropdown extends React.Component {
 				<br></br>
 				<div>
 					<label>Cidade   </label>
-					<select name="cidade" placeholder="City">
+					<select className="selector" name="cidade" placeholder="City">
 						<option>---Selecionar Cidade---</option>
 						{this.state.cities.map((e, key) => {
 							return <option key={key}>{e}</option>;
