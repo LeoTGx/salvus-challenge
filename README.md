@@ -2,7 +2,7 @@ Project created for Salvus.
 
 # Getting Started
 
-##Install
+## Install
 
 - [node.js](https://nodejs.org/en/download/)
 
