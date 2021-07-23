@@ -48,15 +48,18 @@ const UserInfo = () => {
 
     const onUpdateName = e =>{
         e.preventDefault();
+       
+        console.log("no enter")
 
         try{
             firebase.firestore().collection('doctors').doc(firebase.auth().currentUser.uid).update({nome}).then(() => {
-  
+
             })
         } catch (error) {
             alert(error);
         }
     }
+    
     const onUpdateGen = e =>{
         e.preventDefault();
 
@@ -132,27 +135,27 @@ const UserInfo = () => {
             <div className="horizontal-layout horizontal-layout--space-evenly" >
                 
                 <form key = {1}>
-                <div className="vertical-layout vertical-layout--center">
-                                
-                        <label>Nome completo</label>
-                        <Input type="text" value={nome} onChange={e => setName(e.currentTarget.value)} />
-                        <Button onClick={onUpdateName}>Atualizar nome</Button> 
+                    <div className="vertical-layout vertical-layout--center">
+                                    
+                            <label>Nome completo</label>
+                            <Input type="text" value={nome} onChange={e => setName(e.currentTarget.value)} />
+                            <Button onClick={onUpdateName}>Atualizar nome</Button> 
 
-                        <label>Telefone</label>
-                        <Input type="text" value={telefone} onChange={e => setTel(e.currentTarget.value)} />   
-                        <Button onClick={onUpdateTel}>Atualizar telefone</Button> 
+                            <label>Telefone</label>
+                            <Input type="text" value={telefone} onChange={e => setTel(e.currentTarget.value)} />   
+                            <Button onClick={onUpdateTel}>Atualizar telefone</Button> 
 
-                        <label>Gênero</label>
-                        <Input type="text" value={genero} onChange={e => setGen(e.currentTarget.value)} />   
-                        <Button onClick={onUpdateGen}>Atualizar gênero</Button> 
+                            <label>Gênero</label>
+                            <Input type="text" value={genero} onChange={e => setGen(e.currentTarget.value)} />   
+                            <Button onClick={onUpdateGen}>Atualizar gênero</Button> 
 
-                        <label>Profissão</label>
-                        <Input type="text" value={profissao} onChange={e => setProf(e.currentTarget.value)} />   
-                        <Button onClick={onUpdateProf}>Atualizar profissão</Button> 
-                        <label>Especialidade</label>
-                        <Input type="text" value={especialidade} onChange={e => setEspec(e.currentTarget.value)} />   
-                        <Button onClick={onUpdateEspec}>Atualizar especialidade</Button> 
-                </div>     
+                            <label>Profissão</label>
+                            <Input type="text" value={profissao} onChange={e => setProf(e.currentTarget.value)} />   
+                            <Button onClick={onUpdateProf}>Atualizar profissão</Button> 
+                            <label>Especialidade</label>
+                            <Input type="text" value={especialidade} onChange={e => setEspec(e.currentTarget.value)} />   
+                            <Button onClick={onUpdateEspec}>Atualizar especialidade</Button> 
+                    </div>     
                 </form>
                 
 

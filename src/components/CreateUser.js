@@ -149,10 +149,11 @@ const CreateUser = ({ history }) => {
               <Select placeholder="Profissão" name="profissao"  >
                 <option>Médico</option>
                 <option>Enfermeiro</option>
-                <option>Assistente de Enfermagem</option>
+                <option>Auxiliar de Enfermagem</option>
               </Select>
             </label>
           </div>
+          <br></br>
           <div>
             <label>
               Especialidade   
@@ -163,11 +164,13 @@ const CreateUser = ({ history }) => {
               </Select>
             </label>
           </div>
+          <br></br>
           <div>
             <React.StrictMode>
               <Dropdown />
             </React.StrictMode>
           </div>
+
           <div>
             <h4>Onde pode atender</h4>
             <label>

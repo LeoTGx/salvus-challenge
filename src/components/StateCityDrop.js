@@ -37,7 +37,7 @@ class Dropdown extends React.Component {
 						})}
 					</select>
 				</div>
-				
+				<br></br>
 				<div>
 					<label>Cidade   </label>
 					<select name="cidade" placeholder="City">
