@@ -102,37 +102,41 @@ const CreateUser = ({ history }) => {
       <div className="horizontal-layout horizontal-layout--center" >
         <form  className="teste" onSubmit={doNewAccount}>
           <h4>Detalhes da conta</h4>
-          <div>
-              <label>
-              Email   
-              <Input name="email" type="email" placeholder="Email" />
+          <div  >
+              <label className="vertical-layout vertical-layout--center" >
+              Email
+                <div >
+                  <Input  name="email" type="email" placeholder="Email" />
+                </div>   
               </label>
           </div>
-          <div>
-            <label>
-              Password    
-              <Input name="password" type="password" placeholder="Password" />
+          <div className=" horizontal-layout horizontal-layout--center" >
+            <label className="vertical-layout vertical-layout--center" >
+              Senha    
+              <Input name="password" type="password" placeholder="Senha" />
             </label>
           </div>
           <h4>Detalhes Pessoais</h4>
           <div>
-            <label>
+            <label className="vertical-layout vertical-layout--center" >
               Nome Completo   
               <Input name="name" type="text" placeholder="Nome Completo" />
             </label>
           </div>
           <div>
-            <label> Data De Nascimento</label>
-            <DatePicker value={data_nascimento} onChange={onDateChange} />
+            <label className="vertical-layout vertical-layout--center" > 
+              Data De Nascimento
+              <DatePicker className="selector" value={data_nascimento} onChange={onDateChange} />
+            </label>
           </div>
           <div>
-            <label>
+            <label className="vertical-layout vertical-layout--center" >
               Telefone   
               <Input name="telefone" type="text" placeholder="Telefone"  />
             </label>
           </div>
           <div>
-            <label>
+            <label className="vertical-layout vertical-layout--center" >
               Gênero   
               <Select width="200px" height="50px" placeholder="Genero" name="genero"  >
                 <option>Masculino</option>
@@ -144,7 +148,7 @@ const CreateUser = ({ history }) => {
           </div>
           <h4>Detalhes Profissionais</h4>
           <div>
-            <label>
+            <label className="vertical-layout vertical-layout--center" >
               Profissão
               <Select placeholder="Profissão" name="profissao"  >
                 <option>Médico</option>
@@ -155,7 +159,7 @@ const CreateUser = ({ history }) => {
           </div>
           <br></br>
           <div>
-            <label>
+            <label className="vertical-layout vertical-layout--center" >
               Especialidade   
               <Select placeholder="Especialidade" name="especialidade"  >
                 <option>Odontologia</option>
@@ -164,28 +168,30 @@ const CreateUser = ({ history }) => {
               </Select>
             </label>
           </div>
-          <br></br>
+          <br/>
           <div>
             <React.StrictMode>
-              <Dropdown className="selector" />
+              <Dropdown/>
             </React.StrictMode>
           </div>
 
           <div>
             <h4>Onde pode atender</h4>
-            <label>
+            <label className="vertical-layout vertical-layout--center" >
             <label>Cidades que pode atender: </label> <br/>
-              {
-                  checkboxes.map(item => (
-                      <label key={item.key}>
-                          {item.name}
-                          <Input type="checkbox" name={item.name} checked={checkedItems[item.name]} onChange={handleChange} />
-                      </label>
-                  ))
-              }
+              <div className="vertical-layout vertical-layout--baseline" >
+                {
+                    checkboxes.map(item => (
+                        <label key={item.key}>         
+                            <Input type="checkbox" name={item.name} checked={checkedItems[item.name]} onChange={handleChange} />
+                            {item.name}
+                        </label>
+                    ))
+                }
+              </div>
             </label>
           </div>
-          <Button type="submit">Sign Up</Button>
+          <Button type="submit">Criar conta</Button>
         </form>
       </div>
       

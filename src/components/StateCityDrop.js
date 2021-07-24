@@ -29,7 +29,7 @@ class Dropdown extends React.Component {
 		return (
 			<div id="container">
 				<div>
-					<label>Estado   </label>
+					<label className="vertical-layout vertical-layout--center" >Estado</label>
 					<select className="selector" background = "black" name="estado" placeholder="State" value={this.state.selectedState} onChange={this.changeState}>
 						<option>---Selecionar Estado---</option>
 						{this.state.states.map((e, key) => {
@@ -39,7 +39,7 @@ class Dropdown extends React.Component {
 				</div>
 				<br></br>
 				<div>
-					<label>Cidade   </label>
+					<label className="vertical-layout vertical-layout--center" >Cidade</label>
 					<select className="selector" name="cidade" placeholder="City">
 						<option>---Selecionar Cidade---</option>
 						{this.state.cities.map((e, key) => {

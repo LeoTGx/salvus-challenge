@@ -136,22 +136,22 @@ const UserInfo = () => {
                                     <div className="vertical-layout vertical-layout--center">
                                     
                             <label>Nome completo</label>
-                            <Input type="text" value={nome} onChange={e => setName(e.currentTarget.value)} />
+                            <Input type="text" placeholder="Novo nome" value={nome} onChange={e => setName(e.currentTarget.value)} />
                             <Button onClick={onUpdateName}>Atualizar nome</Button> 
 
                             <label>Telefone</label>
-                            <Input type="text" value={telefone} onChange={e => setTel(e.currentTarget.value)} />   
+                            <Input type="text" placeholder="Novo telefone" value={telefone} onChange={e => setTel(e.currentTarget.value)} />   
                             <Button onClick={onUpdateTel}>Atualizar telefone</Button> 
 
                             <label>Gênero</label>
-                            <Input type="text" value={genero} onChange={e => setGen(e.currentTarget.value)} />   
+                            <Input type="text" placeholder="Novo gênero"  value={genero} onChange={e => setGen(e.currentTarget.value)} />   
                             <Button onClick={onUpdateGen}>Atualizar gênero</Button> 
 
                             <label>Profissão</label>
-                            <Input type="text" value={profissao} onChange={e => setProf(e.currentTarget.value)} />   
+                            <Input type="text" placeholder="Nova profissão" value={profissao} onChange={e => setProf(e.currentTarget.value)} />   
                             <Button onClick={onUpdateProf}>Atualizar profissão</Button> 
                             <label>Especialidade</label>
-                            <Input type="text" value={especialidade} onChange={e => setEspec(e.currentTarget.value)} />   
+                            <Input type="text" placeholder="Nova especialidade" value={especialidade} onChange={e => setEspec(e.currentTarget.value)} />   
                             <Button onClick={onUpdateEspec}>Atualizar especialidade</Button> 
                     </div>     
 
@@ -181,9 +181,8 @@ const UserInfo = () => {
                 </form>
             </div>            
                 <div className="horizontal-layout horizontal-layout--center">
-                    <br></br>
+                    <br/>
                     {url}
-            
                 </div>
 
         </div>

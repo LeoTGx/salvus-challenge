@@ -42,15 +42,15 @@ const Login = ({ history }) => {
         <h1>Log in</h1>
         <div className="vertical-layout vertical-layout--center" >
           <form className="vertical-layout vertical-layout--center" onSubmit={doLogin}>
-            <label>
+            <label className="vertical-layout vertical-layout--center" >
               Email
               <Input name="email" type="email" placeholder="Email" />
             </label>
-            <label>
+            <label className="vertical-layout vertical-layout--center" >
               Password
               <Input name="password" type="password" placeholder="Password" />
             </label>
-            <Button width="100px" type="submit">Log in</Button>
+            <Button width="100px" type="submit">Entrar</Button>
           </form>
         </div>
         

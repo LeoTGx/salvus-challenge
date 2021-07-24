@@ -38,7 +38,7 @@ export const Select = styled.select`
     font-size: 20px;
     border: 2px solid black;
     border-radius:3px;
-    margin-left: 10px;
+    margin: 0.5em;
 
     option {
         color: black;
